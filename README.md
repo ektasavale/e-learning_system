@@ -21,8 +21,3 @@ An online platform for managing courses, students, and teachers — built with *
 - **Database:** MySQL
 - **API:** Django REST Framework
 
-## ⚙️ Installation
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/e-learning-system.git
