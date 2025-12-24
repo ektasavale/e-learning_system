@@ -18,7 +18,15 @@ app.use(express.json());
 app.use(cors());
 const courseRoutes = require("./routes/courseRoutes");
 app.use("/api/courses", courseRoutes);
+
+const userRoutes = require("./routes/userRoutes");
+app.use("/api/users", userRoutes);
+
+const authRoutes = require("./routes/authRoutes");
+app.use("/api/auth", authRoutes);
+
 app.use(express.json());
+
 // Basic route (for testing)
 app.get("/", (req, res) => {
   res.send("API is running...");
@@ -32,4 +40,7 @@ connectDB();
 const PORT = process.env.PORT || 5000;
 
 // Start server
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
+
